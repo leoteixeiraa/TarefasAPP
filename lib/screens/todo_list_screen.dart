@@ -1,3 +1,4 @@
+import 'package:TarefasAPP/screens/add_task_screen.dart';
 import 'package:flutter/material.dart';
 
 class TodoListScreen extends StatefulWidget {
@@ -34,7 +35,12 @@ class _TodoListScreenState extends State<TodoListScreen> {
       floatingActionButton: FloatingActionButton(
         backgroundColor: Theme.of(context).primaryColor,
         child: Icon(Icons.add),
-        onPressed: () => print('Navegue para adicionar a tela da tarefa'),
+        onPressed: () => Navigator.push(
+          context,
+          MaterialPageRoute(
+            builder: (_) => AddTaskScreen(),
+          ),
+        ),
       ),
       body: ListView.builder(
         padding: EdgeInsets.symmetric(vertical: 80.0),

@@ -90,6 +90,7 @@ class _AddTaskScreenState extends State<AddTaskScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      resizeToAvoidBottomInset: false,
       body: GestureDetector(
         child: GestureDetector(
           onTap: () => FocusScope.of(context).unfocus(),
@@ -182,7 +183,7 @@ class _AddTaskScreenState extends State<AddTaskScreen> {
                             ),
                           ),
                           validator: (input) => _priority == null
-                              ? 'Por Favor selecione a prioridade desta tarefa'
+                              ? 'Por Favor selecione a prioridade'
                               : null,
                           onChanged: (value) {
                             setState(() {

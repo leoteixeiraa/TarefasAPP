@@ -106,17 +106,22 @@ class _TodoListScreenState extends State<TodoListScreen> {
               .length;
 
           return ListView.builder(
-            padding: EdgeInsets.symmetric(vertical: 80.0),
+            padding: EdgeInsets.symmetric(vertical: 10.0),
             itemCount: 1 + snapshot.data.length,
             // ignore: missing_return
             itemBuilder: (BuildContext context, int index) {
               if (index == 0) {
                 return Padding(
-                  padding:
-                      EdgeInsets.symmetric(horizontal: 40.0, vertical: 20.0),
+                  padding: EdgeInsets.symmetric(horizontal: 40.0),
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: <Widget>[
+                      Padding(
+                        padding: EdgeInsets.symmetric(vertical: 10),
+                        child: Container(
+                          child: Image.asset('assets/images/Logo_IFC.png'),
+                        ),
+                      ),
                       Text(
                         'Minhas Tarefas',
                         style: TextStyle(

@@ -1,17 +1,17 @@
 # TarefasAPP
 ![](/assets/images/Logo_IFC2.png)
 ### Já fez todas as suas tarefas da faculdade hoje ?
-Aplicativo destinado para os estudantes gerenciarem suas tarefas diárias no IFC Fraiburgo. Ao iniciar o aplicativo, na tela inicial, apresenta-se todas as atividades ordenadas pela data da entrega(da mais próxima a última). As tarefas possuem **título**, **data para ser entregue**, e a **prioridade da atividade**. O estudante ao concluir algumas das atividades cadastradas, ele poderá clicar no checkbox ao lado direito do nome da atividade e automaticamente o aplicativo riscará o mesmo, demonstrando que tal atividade já foi concluida. Caso o estudante precise alterar quaisquer informação na atividade, basta ele clicar no nome da atividade e o aplicativo levará ele até na tela com as informações daquela atividade, ao preencher as informações atualizada o usuário poderá clicar no botão "*atualizar*" que atualiza as informações e volta para a tela inicial ou "*apagar*" que apaga a atividade do banco de dados e volta para a tela inicial. 
+Aplicativo destinado para os estudantes gerenciarem suas tarefas diárias no IFC Fraiburgo. Ao iniciar o aplicativo, na tela inicial, apresenta-se todas as atividades ordenadas pela data da entrega(da mais próxima a última). As tarefas possuem **título**, **data para ser entregue**, e a **prioridade da atividade**. O estudante ao concluir algumas das atividades cadastradas, ele poderá clicar no checkbox ao lado direito do nome da atividade e automaticamente o aplicativo riscará o mesmo, demonstrando que tal atividade já foi concluida. Caso o estudante precise alterar quaisquer informação na atividade, basta ele clicar no nome da atividade e o aplicativo levará ele na tela com as informações daquela atividade, ao preencher as informações atualizada o usuário poderá clicar no botão "*atualizar*" que atualiza as informações e volta para a tela inicial ou "*apagar*" que apaga a atividade do banco de dados e volta para a tela inicial. 
 
 ![](/assets/images/3TelasApp.jpg)!
 Uma demonstração do aplicativo pode ser [Vizualida por Aqui](https://i.imgur.com/nU7F4vc.mp4)
 
 ### Funcionalidades do Aplicativo
 * Inserir, atualizar e apagar tarefas;
-* Input de data é carregada automaticamente com a data atual na tela de cadastrar tarefa;
-* Validação nos input para verificar se o usuário escreveu corretamente;
+* Input de data é carregada automaticamente com a data atual na tela de cadastrar tarefa
+* Validação nos input para verificar se o usuário escreveu corretamente
 * Contador do total de atividades cadastradas e do total de atividades concluídas
-* Ordenação de data mais próxima p/ data antiga
+* Ordenação de data mais próxima p/ ultima
 * Botão de atualizar e apagar tarefas na página de detalhes da ativade.
 
 ### Pacotes e tecnologias utilizadas

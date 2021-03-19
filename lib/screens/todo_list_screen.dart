@@ -127,7 +127,7 @@ class _TodoListScreenState extends State<TodoListScreen> {
                       ),
                       SizedBox(height: 10.0),
                       Text(
-                        '$completedTaskCount de ${snapshot.data.length}',
+                        'Você realizou $completedTaskCount de ${snapshot.data.length} tarefas',
                         style: TextStyle(
                           color: Colors.grey,
                           fontSize: 20.0,

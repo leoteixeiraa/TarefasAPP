@@ -59,6 +59,12 @@ class _AddTaskScreenState extends State<AddTaskScreen> {
     }
   }
 
+  _delete() {
+    DatabaseHelper.instance.deleteTask(widget.task.id);
+    widget.updateTaskList();
+    Navigator.pop(context);
+  }
+
   _submit() {
     if (_formKey.currentState.validate()) {
       _formKey.currentState.save();
@@ -70,10 +76,12 @@ class _AddTaskScreenState extends State<AddTaskScreen> {
         task.status = 0;
         DatabaseHelper.instance.insertTask(task);
       } else {
+        //Atualizar Tarefa
+        task.id = widget.task.id;
         task.status = widget.task.status;
         DatabaseHelper.instance.updateTask(task);
       }
-      //Atualizar Tarefa
+
       widget.updateTaskList();
       Navigator.pop(context);
     }
@@ -100,7 +108,7 @@ class _AddTaskScreenState extends State<AddTaskScreen> {
                 ), //GestureDetector
                 SizedBox(height: 20.0),
                 Text(
-                  'Adicionar Tarefa',
+                  widget.task == null ? 'Adicionar Tarefa' : 'Atualizar Tarefa',
                   style: TextStyle(
                     color: Colors.black,
                     fontSize: 40.0,
@@ -185,24 +193,49 @@ class _AddTaskScreenState extends State<AddTaskScreen> {
                         ),
                       ),
                       Container(
-                          margin: EdgeInsets.symmetric(vertical: 20.0),
-                          height: 60.0,
-                          width: double.infinity,
-                          decoration: BoxDecoration(
-                            color: Theme.of(context).primaryColor,
-                            borderRadius: BorderRadius.circular(30.0),
-                          ),
-                          child: TextButton(
-                            //TextButton foi trocado por FlatButton
-                            child: Text(
-                              'Adicionar',
-                              style: TextStyle(
-                                color: Colors.white,
-                                fontSize: 20.0,
-                              ),
+                        margin: EdgeInsets.symmetric(vertical: 20.0),
+                        height: 60.0,
+                        width: double.infinity,
+                        decoration: BoxDecoration(
+                          color: Theme.of(context).primaryColor,
+                          borderRadius: BorderRadius.circular(30.0),
+                        ),
+                        child: TextButton(
+                          //TextButton foi trocado por FlatButton
+                          child: Text(
+                            widget.task == null
+                                ? 'Adicionar Tarefa'
+                                : 'Atualizar Tarefa',
+                            style: TextStyle(
+                              color: Colors.white,
+                              fontSize: 20.0,
                             ),
-                            onPressed: _submit,
-                          ))
+                          ),
+                          onPressed: _submit,
+                        ),
+                      ),
+                      widget.task != null
+                          ? Container(
+                              margin: EdgeInsets.symmetric(vertical: 20.0),
+                              height: 60.0,
+                              width: double.infinity,
+                              decoration: BoxDecoration(
+                                color: Colors.red,
+                                borderRadius: BorderRadius.circular(30.0),
+                              ),
+                              child: TextButton(
+                                //TextButton foi trocado por FlatButton
+                                child: Text(
+                                  'Apagar',
+                                  style: TextStyle(
+                                    color: Colors.white,
+                                    fontSize: 20.0,
+                                  ),
+                                ),
+                                onPressed: _delete,
+                              ),
+                            )
+                          : SizedBox.shrink()
                     ],
                   ),
                 )

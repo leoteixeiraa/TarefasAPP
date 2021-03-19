@@ -3,7 +3,7 @@
 #### Já fez todas as suas tarefas da faculdade hoje ?
 Aplicativo destinado para os estudantes gerenciarem suas tarefas diárias no IFC Fraiburgo. Ao iniciar o aplicativo, na tela inicial, apresenta-se todas as atividades ordenadas pela data da entrega(da mais próxima a última). As tarefas possuem **título**, **data para ser entregue**, e a **prioridade da atividade**. O estudante ao concluir algumas das atividades cadastradas, ele poderá clicar no [x] checkbox ao lado direito do nome da atividade e automaticamente o aplicativo riscará o mesmo, demonstrando que tal atividade já foi concluida. Caso o estudante precise alterar quaisquer informação na atividade, basta ele clicar no nome da atividade e o aplicativo levará ele até na tela com as informações daquela atividade, ao preencher as informações atualizada o usuário poderá clicar no botão "*atualizar*" que atualiza as informações e volta para a tela inicial ou "*apagar*" que apaga a atividade do banco de dados e volta para a tela inicial. 
 
-![](/assets/images/1.png)![](/assets/images/2.png)![](/assets/images/3.png)
+![](/assets/images/3TelasApp.jpg)!
 ### Funcionalidades do Aplicativo
 * Inserir, atualizar e apagar tarefas;
 * Input de data é carregada automaticamente com a data atual na tela de cadastrar tarefa;
